@@ -1,0 +1,54 @@
+# Valid TOML config file
+
+### Blockchain
+genesis-file="/root/blockchain/config/genesis.json" # Path to the custom genesis file
+data-path="/root/blockchain/data"
+
+### Network
+bootnodes=[
+    # node1.testnet.ozonechain.io
+    "",
+
+    # node2.testnet.ozonechain.io
+    "",
+
+    # node3.testnet.ozonechain.io
+    "",
+
+    # node4.testnet.ozonechain.io
+    ""
+]
+
+p2p-host=""
+p2p-port=30303
+max-peers=30
+
+# permissions
+permissions-nodes-config-file-enabled=true
+permissions-nodes-config-file="/root/blockchain/config/permissions_config.toml"
+permissions-accounts-config-file-enabled=false
+
+### key
+node-private-key-file="/root/blockchain/data/keys/nodekey.pri"
+
+### RPC
+rpc-http-enabled=true
+rpc-http-host="127.0.0.1"
+rpc-http-port=8545
+rpc-http-api=["ETH","NET","WEB3"]
+rpc-http-cors-origins=["*"]
+
+rpc-ws-enabled=true
+rpc-ws-host="127.0.0.1"
+rpc-ws-port=8546
+rpc-ws-api=["ADMIN","EEA","WEB3","ETH","NET","PERM","QBFT"]
+
+graphql-http-enabled=false
+
+host-allowlist=["*"]
+
+### Mining
+# miner-enabled=true
+
+### Gas
+min-gas-price=5000000000

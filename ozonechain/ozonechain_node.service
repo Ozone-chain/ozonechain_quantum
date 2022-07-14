@@ -1,0 +1,19 @@
+[Unit]
+Description=Run and manage the Ozone chain node
+Documentation=https://ozonechain.io
+ConditionPathExists=/root/blockchain/config/genesis.json
+After=networking.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+TimeoutStartSec=0
+Restart=on-failure
+RestartSec=30s
+WorkingDirectory=/root/ozonechain_quantum/ozonechain
+ExecStart=bash run_ozonechain_node.sh
+SyslogIdentifier=ozonechain-node
+
+[Install]
+WantedBy=multi-user.target

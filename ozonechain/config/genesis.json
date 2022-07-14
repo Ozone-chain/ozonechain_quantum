@@ -1,0 +1,30 @@
+{
+  "config" : {
+    "chainId" : 401,
+    "homesteadBlock": 0,
+    "eip150Block": 0,
+    "eip155Block": 0,
+    "eip158Block": 0,
+    "berlinBlock": 0,
+    "qbft" : {
+      "blockperiodseconds" : 5,
+      "requesttimeoutseconds" : 10,
+      "epochlength" : 4320
+    }
+  },
+  "nonce" : "0x0",
+  "timestamp" : "0x58ee40ba",
+  "gasLimit" : "0xf7b760",
+  "difficulty" : "0x1",
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "mixHash" : "",
+  "extraData" : "",
+  "coinbase" : "0x0000000000000000000000000000000000000000",
+  "alloc" : {
+    "" : {
+      "balance" : "100000000000000000000000000"
+    }
+  }
+}
