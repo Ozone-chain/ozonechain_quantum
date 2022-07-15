@@ -7,16 +7,16 @@ data-path="/root/blockchain/data"
 ### Network
 bootnodes=[
     # node1.testnet.ozonechain.io
-    "",
+    "enode://81fa589667e2356f394f169f60f2c60da4040e88b2ab636815b3ce0de231d250de6acced04ddf448aa5e30de22bbb7891f87cf3ef22f3ec1b27119a9b2bde106@159.89.166.153:30303",
 
     # node2.testnet.ozonechain.io
-    "",
+    "enode://87133c3c35d029d0beb7b4682ecd1f72e10712534d8fe810d501890cc82f6d220a904a1fa16d510bd69651e02f7c39c858342e12a459613cca3ab9b7505e0542@161.35.124.115:30303",
 
     # node3.testnet.ozonechain.io
-    "",
+    "enode://e9dcb722c977c425d2003002a2f50a19a995ede810f8d7377a6281f5697fe95a9008a49d72508ffcb3c9e07e4b2bec62b70c381af17e74bb861012417dd790ce@164.90.196.232:30303",
 
     # node4.testnet.ozonechain.io
-    ""
+    "enode://aefe5e8e40510f207e7ea2d10f8917df5bdb2557fdecfe870cdb7ae0377bf1d1e3705ad0779f0d101ede93ec7870fbde4636d415617be6b2de9e7f4b3cb7bad8@157.245.147.105:30303"
 ]
 
 p2p-host=""
