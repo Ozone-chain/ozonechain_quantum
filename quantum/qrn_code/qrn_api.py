@@ -10,8 +10,8 @@ from decouple import config
 
 # QRN API
 BASEURL = config('QRN_URL', default="https://dummy-url.com")
-API_KEY  = config('QRN_API_KEY')
-SALT = config('QRN_API_SALT')
+API_KEY  = config('QRN_API_KEY', default="dummy")
+SALT = config('QRN_API_SALT', default="dummy")
 
 # Python
 IS_LOGGER_ENABLED = config("IS_LOGGER_ENABLED", default=True, cast=bool)
