@@ -5,7 +5,7 @@
     "eip150Block": 0,
     "eip155Block": 0,
     "eip158Block": 0,
-    "berlinBlock": 0,
+    "londonBlock": 0,
     "qbft" : {
       "blockperiodseconds" : 5,
       "requesttimeoutseconds" : 10,
@@ -19,7 +19,7 @@
   "number": "0x0",
   "gasUsed": "0x0",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "mixHash" : "",
+  "mixHash" : "0x4c76ca87469b26183b199457a3e4cf483137974f2ee718e681f2aa9b6254a918",
   "extraData" : "",
   "coinbase" : "0x0000000000000000000000000000000000000000",
   "alloc" : {
