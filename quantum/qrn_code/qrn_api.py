@@ -9,7 +9,7 @@ from decouple import config
 # ENVIRONMENT VARIABLES
 
 # QRN API
-BASEURL = config('QRN_URL')
+BASEURL = config('QRN_URL', default="https://dummy-url.com")
 API_KEY  = config('QRN_API_KEY')
 SALT = config('QRN_API_SALT')
 
