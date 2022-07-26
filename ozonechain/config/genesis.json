@@ -6,7 +6,7 @@
     "eip155Block": 0,
     "eip158Block": 0,
     "londonBlock": 0,
-    "berlinBlock": 55200,
+    "berlinBlock": 50,
     "qbft" : {
       "blockperiodseconds" : 5,
       "requesttimeoutseconds" : 10,
@@ -25,6 +25,9 @@
   "coinbase" : "0x0000000000000000000000000000000000000000",
   "alloc" : {
     "0x1BA81F460A94daCFA05D49b9080fE6D6f431aE70" : {
+      "balance" : "100000000000000000000000000"
+    },
+    "0xc016196BeeEb003f70031f8f6b0fe030B9F2AE0a" : {
       "balance" : "100000000000000000000000000"
     }
   }
