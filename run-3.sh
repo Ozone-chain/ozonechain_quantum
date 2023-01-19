@@ -161,3 +161,4 @@ if [ -z "$NODE_PUBLIC_IP" ]
     else
         bash start_ozonechain_node_service.sh
 fi
+
