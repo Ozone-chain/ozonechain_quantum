@@ -15,9 +15,9 @@ clear='\033[0m'
 
 GIT_DIR="/root/ozonechain_quantum"
 BLOCKCHAIN_DIR="/root/blockchain"
-BESU_VER="22.4.4"       # Change this value to install a different version
-JAVA_VER="16.0.2"
-JAVA_URL="https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
+BESU_VER="22.10.3"       # Change this value to install a different version
+JAVA_VER="17.0.6"
+JAVA_URL="https://download.oracle.com/java/17/archive/jdk-17.0.6_linux-x64_bin.tar.gz"
 
 mkdir -p $BLOCKCHAIN_DIR
 mkdir -p $BLOCKCHAIN_DIR/{data,config,temp}
@@ -44,9 +44,9 @@ if [[ `command -v java` ]]
         echo "Downloading java package..."
         curl -O $JAVA_URL
         echo "Extracting java package..."
-        tar -xf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz"
+        tar -xf "jdk-$JAVA_VER_linux-x64_bin.tar.gz"
         echo "Copying java package to system path..."
-        rsync "jdk-16.0.2" /opt/ -a  
+        rsync "jdk-$JAVA_VER" /opt/ -a  
 fi
 
 # Step 2: Adding java to $PATH

@@ -34,7 +34,7 @@ fi
 if [[ ! -d "$GIT_DIR" ]]
     then
         cd /root
-        git clone -b testnet https://github.com/Ozone-chain/ozonechain_quantum.git
+        git clone -b main https://github.com/Ozone-chain/ozonechain_quantum.git
 fi
 
 echo ""
