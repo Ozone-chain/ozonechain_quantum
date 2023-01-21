@@ -1,7 +1,7 @@
 {
   "config" : {
-    "chainId" : 400,
-    "bellatrixBlock": 0,
+    "chainId" : 4000,
+    "londonBlock": 0,
     "qbft" : {
       "blockperiodseconds" : 5,
       "requesttimeoutseconds" : 10,
