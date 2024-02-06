@@ -17,7 +17,7 @@ GIT_DIR="/root/ozonechain_quantum"
 BLOCKCHAIN_DIR="/root/blockchain"
 BESU_VER="24.1.0"       # Change this value to install a different version
 JAVA_VER="17.0.19"
-JAVA_URL="JAVA_URL="https://download.java.net/java/GA/jdk17.0.19/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-17.0.19_linux-x64_bin.tar.gz"
+JAVA_URL="https://download.java.net/java/GA/jdk17.0.19/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-17.0.19_linux-x64_bin.tar.gz"
 
 mkdir -p $BLOCKCHAIN_DIR
 mkdir -p $BLOCKCHAIN_DIR/{data,config,temp}
