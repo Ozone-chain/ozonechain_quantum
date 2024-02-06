@@ -43,10 +43,12 @@ if [[ `command -v java` ]]
         cd $BLOCKCHAIN_DIR/temp
         echo "Downloading java package..."
         curl -O $JAVA_URL
+        ls -l
+        tar -tf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz"
         echo "Extracting java package..."
         tar -xf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz"
         echo "Copying java package to system path..."
-        rsync "jdk-17.0.19" /opt/ -a  
+        rsync -a "jdk-${JAVA_VER}/" /opt/  
 fi
 
 # Step 2: Adding java to $PATH
