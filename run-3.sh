@@ -3,7 +3,7 @@
 echo "Running run-3.sh: Set up Ozone chain node and keys"
 echo ""
 
-## Color variables
+# Color variables
 red='\033[0;31m'
 green='\033[0;32m'
 yellow='\033[0;33m'
@@ -16,8 +16,8 @@ clear='\033[0m'
 GIT_DIR="/root/ozonechain_quantum"
 BLOCKCHAIN_DIR="/root/blockchain"
 BESU_VER="24.1.0"       # Change this value to install a different version
-JAVA_VER="17.0.19"
-JAVA_URL="https://download.java.net/java/GA/jdk17.0.19/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-17.0.19_linux-x64_bin.tar.gz"
+JAVA_VER="16.0.2"
+JAVA_URL="https://download.java.net/java/GA/jdk16.0.2/d4a915d82b4c4fbb9bde534da945d746/7/GPL/openjdk-16.0.2_linux-x64_bin.tar.gz"
 
 mkdir -p $BLOCKCHAIN_DIR
 mkdir -p $BLOCKCHAIN_DIR/{data,config,temp}
@@ -41,12 +41,12 @@ if [[ `command -v java` ]]
         echo "java is already installed"
     else
         cd $BLOCKCHAIN_DIR/temp
-        echo "Installing OpenJDK 17..."
-        sudo apt update
-        sudo apt install openjdk-17-jdk openjdk-17-jre
-        JDK_DIR=$(tar tf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz" | head -1 | cut -f1 -d'/')
+        echo "Downloading java package..."
+        curl -O $JAVA_URL
+        echo "Extracting java package..."
+        tar -xf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz"
         echo "Copying java package to system path..."
-        rsync "$JDK_DIR" /opt/ -a    
+        rsync "jdk-16.0.2" /opt/ -a  
 fi
 
 # Step 2: Adding java to $PATH
