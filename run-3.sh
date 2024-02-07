@@ -41,10 +41,9 @@ if [[ `command -v java` ]]
         echo "java is already installed"
     else
         cd $BLOCKCHAIN_DIR/temp
-        echo "Downloading java package..."
-        curl -O $JAVA_URL
-        echo "Extracting java package..."
-        tar -xf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz"
+        echo "Installing OpenJDK 17..."
+        sudo apt update
+        sudo apt install openjdk-17-jdk openjdk-17-jre
         JDK_DIR=$(tar tf "openjdk-${JAVA_VER}_linux-x64_bin.tar.gz" | head -1 | cut -f1 -d'/')
         echo "Copying java package to system path..."
         rsync "$JDK_DIR" /opt/ -a    
