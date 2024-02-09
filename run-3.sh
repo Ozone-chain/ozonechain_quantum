@@ -15,7 +15,7 @@ clear='\033[0m'
 
 GIT_DIR="/root/ozonechain_quantum"
 BLOCKCHAIN_DIR="/root/blockchain"
-BESU_VER="23.7.2"       # Change this value to install a different version
+BESU_VER="24.1.0"       # Change this value to install a different version
 JAVA_VER="17.0.6"
 JAVA_URL="https://download.oracle.com/java/17/archive/jdk-17.0.6_linux-x64_bin.tar.gz"
 
