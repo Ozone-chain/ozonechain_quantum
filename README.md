@@ -25,11 +25,10 @@ Ozone Chain is a decentralized platform designed to address real-world concerns 
 ## Community Engagement
 
 Join the global Ozone community on various platforms:
-- **Telegram**: Stay in touch with discussions and announcements.
-- **Twitter**: Follow for the latest news and updates.
-- **Discord**: Engage with the community and interact with the team.
-- **Medium**: Discover stories and insights about Ozone Chain.
-- **GitHub**: Contribute to the codebase and watch for updates.
+- [**Telegram**](https://t.me/ozonechainlabs): Stay in touch with discussions and announcements.
+- [**Twitter**](https://twitter.com/Ozone_chain): Follow for the latest news and updates.
+- [**Discord**](https://discord.com/invite/xfG5rgQps3): Engage with the community and interact with the team.
+- [**Medium**](https://medium.com/@Ozone_chain): Discover stories and latest articles about Ozone Chain.
 
 ## Partnerships & Exchange Listings
 
