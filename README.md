@@ -51,9 +51,6 @@ Find comprehensive documentation including whitepapers, tokenomics, and EVM docu
 
 Explore the roadmap to see the journey and future developments planned for Ozone Chain.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
