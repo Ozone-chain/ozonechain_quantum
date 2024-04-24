@@ -1,4 +1,4 @@
-# Ozone Chain
+# Ozone Chain 
 
 Welcome to the official GitHub repository for Ozone Chain, the world’s first quantum-resistant blockchain. Here you'll find resources, documentation, and tools to get started with developing on Ozone Chain's secure and scalable platform.
 
@@ -29,6 +29,7 @@ Join the global Ozone community on various platforms:
 - [**Twitter**](https://twitter.com/Ozone_chain): Follow for the latest news and updates.
 - [**Discord**](https://discord.com/invite/xfG5rgQps3): Engage with the community and interact with the team.
 - [**Medium**](https://medium.com/@Ozone_chain): Discover stories and latest articles about Ozone Chain.
+- [**Website**](https://ozonechain.io/)
 
 ## Partnerships & Exchange Listings
 
