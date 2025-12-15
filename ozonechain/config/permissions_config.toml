@@ -1,4 +1,4 @@
-# accounts-allowlist=["*"]
+## accounts-allowlist=["*"]
 
 nodes-allowlist=[
     # node1.ozonechain.io
