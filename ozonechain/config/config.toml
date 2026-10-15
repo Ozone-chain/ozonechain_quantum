@@ -41,7 +41,7 @@ rpc-http-cors-origins=["*"]
 rpc-ws-enabled=true
 rpc-ws-host="127.0.0.1"
 rpc-ws-port=8546
-rpc-ws-api=["ADMIN","EEA","WEB3","ETH","NET","PERM","QBFT"]
+rpc-ws-api=["ADMIN","WEB3","ETH","NET","PERM","QBFT"]
 
 graphql-http-enabled=false
 
