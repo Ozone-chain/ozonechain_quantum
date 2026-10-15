@@ -46,7 +46,7 @@ if [[ `command -v java` ]]
     else
         cd $BLOCKCHAIN_DIR/temp
         echo "Downloading java package..."
-        curl -O $JAVA_URL
+        curl -L -O $JAVA_URL
         echo "Extracting java package..."
         tar -xf "jdk-${JAVA_VER}_linux-x64_bin.tar.gz"
         echo "Copying java package to system path..."
@@ -89,7 +89,7 @@ if [[ `command -v besu` ]]
         echo "Installing Hyperledger Besu version $BESU_VER..."
         cd $BLOCKCHAIN_DIR/temp
         echo "Downloading besu package..."
-        curl -O $BESU_URL
+        curl -L -O $BESU_URL
         echo "Extracting besu package..."
         tar -xf besu-$BESU_VER.tar.gz
         echo "Copying besu package to system path..."
