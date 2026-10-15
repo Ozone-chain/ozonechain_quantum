@@ -15,9 +15,10 @@ clear='\033[0m'
 
 GIT_DIR="/root/ozonechain_quantum"
 BLOCKCHAIN_DIR="/root/blockchain"
-BESU_VER="24.1.0"       # Change this value to install a different version
-JAVA_VER="17.0.6"
-JAVA_URL="https://download.oracle.com/java/17/archive/jdk-17.0.6_linux-x64_bin.tar.gz"
+BESU_VER="26.9.0"       # Change this value to install a different version
+BESU_URL="https://github.com/besu-eth/besu/releases/download/${BESU_VER}/besu-${BESU_VER}.tar.gz"
+JAVA_VER="27"
+JAVA_URL="https://download.oracle.com/java/27/latest/jdk-27_linux-x64_bin.tar.gz"
 
 mkdir -p $BLOCKCHAIN_DIR
 mkdir -p $BLOCKCHAIN_DIR/{data,config,temp}
@@ -34,6 +35,9 @@ npm install -g wscat
 
 # INSTALL JAVA
 
+# Step 0: Install java pre-requisites
+apt install libjemalloc-dev -y
+
 # Step 1: Installing java
 echo -e "${green}Installing java...${clear}"
 if [[ `command -v java` ]]
@@ -46,12 +50,12 @@ if [[ `command -v java` ]]
         echo "Extracting java package..."
         tar -xf "jdk-${JAVA_VER}_linux-x64_bin.tar.gz"
         echo "Copying java package to system path..."
-        rsync "jdk-$JAVA_VER" /opt/ -a  
+        rsync "jdk-$JAVA_VER" /opt/ -a
 fi
 
 # Step 2: Adding java to $PATH
 if [[ ! -f "/opt/jdk-$JAVA_VER/bin/java" ]]
-    then 
+    then
         echo "Error: java not found in path. Exiting..."
         exit
 fi
@@ -60,7 +64,7 @@ if [[ -f "/opt/jdk-$JAVA_VER/bin/java" ]] && [[ ! `grep '$JAVA_HOME' /etc/profil
         echo "Adding the java path to /etc/profile"
         echo "" >> /etc/profile
         echo "JAVA_HOME=/opt/jdk-$JAVA_VER" >> /etc/profile
-        echo 'PATH=$PATH:$JAVA_HOME/bin' >> /etc/profile  
+        echo 'PATH=$PATH:$JAVA_HOME/bin' >> /etc/profile
 fi
 source /etc/profile
 java -version
@@ -70,7 +74,7 @@ echo ""
 # INSTALL BESU
 
 # Step 1: Check if java is present. Exit if absent.
-if [[ ! `command -v java` ]]  
+if [[ ! `command -v java` ]]
     then
         echo "Error: java command not found. Exiting..."
         exit
@@ -85,7 +89,7 @@ if [[ `command -v besu` ]]
         echo "Installing Hyperledger Besu version $BESU_VER..."
         cd $BLOCKCHAIN_DIR/temp
         echo "Downloading besu package..."
-        curl -O "https://hyperledger.jfrog.io/artifactory/besu-binaries/besu/$BESU_VER/besu-$BESU_VER.tar.gz"
+        curl -O $BESU_URL
         echo "Extracting besu package..."
         tar -xf besu-$BESU_VER.tar.gz
         echo "Copying besu package to system path..."
@@ -94,7 +98,7 @@ fi
 
 # Step 3: Adding besu to $PATH
 if [[ ! -f "/opt/besu-$BESU_VER/bin/besu" ]]
-    then 
+    then
         echo "Error: besu not found in path. Exiting..."
         exit
 fi
@@ -104,7 +108,7 @@ if [[ -f "/opt/besu-$BESU_VER/bin/besu" ]] && [[ ! `grep '$BESU_HOME' /etc/profi
         echo "" >> /etc/profile
         echo "BESU_HOME=/opt/besu-$BESU_VER" >> /etc/profile
         sed -i "/\$JAVA_HOME/d" /etc/profile    # remove the line containing $JAVA_HOME
-        echo 'PATH=$PATH:$JAVA_HOME/bin:$BESU_HOME/bin' >> /etc/profile  
+        echo 'PATH=$PATH:$JAVA_HOME/bin:$BESU_HOME/bin' >> /etc/profile
 fi
 source /etc/profile
 besu --version
@@ -161,4 +165,3 @@ if [ -z "$NODE_PUBLIC_IP" ]
     else
         bash start_ozonechain_node_service.sh
 fi
-
