@@ -48,7 +48,7 @@ graphql-http-enabled=false
 host-allowlist=["*"]
 
 ### Mining
-# miner-enabled=true
+miner-enabled=true
 
 ### Gas
 min-gas-price=5000000000000
